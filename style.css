@@ -1,6 +1,5 @@
 #sect1{
-    width: 100vw;
-    height: 80vh;
+    height: 60vh;
 
     display: grid;
     grid-template-columns: 1fr 35%;
@@ -8,16 +7,31 @@
     justify-content: center;
 
     padding: 7.5%;
+    padding-top: 5%;
+
+    position: relative;
 }
 
 
 #sect1 .left{
+    position: relative;
     font-size: 1.5cqw;
 
     h1, span{
         margin-bottom: 2%;
-        font-family: "empFont";
         font-size: 3cqw;
+    }
+
+    a{
+        color: black;
+        position: absolute;
+        left: 30%;
+        top: 150%;
+        font-family: "empFont";
+        font-weight: 900;
+        background-color: var(--green);
+        padding: 2%;
+        border-radius: 2rem;
     }
 }
 
@@ -27,8 +41,69 @@
 }
 
 #sect1 img{
-    width: 80%;
+    height: 80%;
     border-radius: 100%;
     filter: blur(.5px);
     box-shadow: 50px 20px 200px 10px rgba(0, 255, 128, 0.5);
+}
+
+
+#sect2{
+    height: 40vh;
+
+    padding: 5%;
+}
+
+#sect2 h1{
+    text-align: center;
+    font-size: 3vw;
+}
+
+#sect2 p{
+    text-align: center;
+}
+
+#sect3{
+    min-height: fit-content;
+    padding: 5%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+
+    gap: 5%; 
+}
+
+.infoCard{
+    max-width: 250px;
+    position: relative;
+}
+
+.infoCard img{
+    width: 100%;
+}
+
+.infoCard div{
+    aspect-ratio: 1/1;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    padding: 5%;
+
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.61),  rgba(0, 0, 0, 0.822));
+
+    opacity: 0;
+
+    transition: opacity .25s;
+
+    cursor: pointer;
+}
+.infoCard div:hover{
+    opacity: 1;
 }

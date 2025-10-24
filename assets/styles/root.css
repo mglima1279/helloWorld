@@ -21,8 +21,16 @@
     font-family: "Montserrat", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 a{
     text-decoration: none;
+}
+
+h1{
+    font-family: "empFont";
 }
 
 header{
@@ -31,7 +39,7 @@ header{
     justify-content: space-between;
 
     width: 100%;
-    height: 5vh;
+    height: 100px;
 
     padding: 3% 5%;
 
@@ -47,7 +55,7 @@ header div{
 header .logos .line{
     background-color: rgba(255, 255, 255, 0.5);
     width: 2px;
-    height: 10cqh;
+    height: 75px;
 }
 
 header .logos{
@@ -55,7 +63,7 @@ header .logos{
 }
 
 header img{
-    height: 10cqh;
+    height: 70px;
 }
 
 header menu{
@@ -81,8 +89,14 @@ body{
     background-color: black;
     min-height: 100vh;
     width: 100vw;
+    overflow-x: hidden;
 }
 
 .emp{
     color: var(--green);
+    font-family: "empFont";
+}
+
+section{
+    width: 100vw;
 }
