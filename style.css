@@ -64,13 +64,14 @@
 }
 
 #sect3{
+    width: 90%;
     min-height: fit-content;
+
     padding: 5%;
+    gap: 5%;
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
-
-    gap: 5%; 
 }
 
 .infoCard{
