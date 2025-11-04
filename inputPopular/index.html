@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matéria — Hello World</title>
+    <link rel="icon" href="../assets/styles/img/logo-noBg.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../assets/styles/root.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logos">
+            <a href="../"><img src="../assets/styles/img/logo-noBg.png" alt="Logo Hello World"></a>
+            <div class="line"></div>
+            <a href="https://www.se.senai.br"><img src="../assets/styles/img/logoSenai.png" alt="Logo Senai"></a>
+        </div>
+
+        <!-- Ícone do menu hamburguer -->
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <menu id="menu">
+            <a href="../">Início</a>
+            <a href="../creditos/">Créditos</a>
+        </menu>
+    </header>
+
+    <main id="materia">
+        <article class="materia-container">
+            <h1 id="titulo">O uso de celular e as relações sociais</h1>
+            <h2 id="subtitulo">Input Popular</h2>
+            <p id="dataAutor">04 de novembro de 2025 — Felippe</p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/iVFxmyAjSXI?si=yUdz8dHZVbyji_jK"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+
+            <p id="conteudo1">
+                O uso do celular mudou completamente a forma como as pessoas se relacionam.
+                Vivemos entre duas comunidades: a virtual, formada pelas redes sociais e grupos online,
+                e a real, composta pela família, amigos e convivência presencial.
+                A questão central é: será que a comunidade virtual está substituindo a real?
+            </p>
+
+            <blockquote id="citacao">
+                "A presença verdadeira não é estar apenas de corpo, mas de mente e atenção com quem está ao seu lado."
+            </blockquote>
+
+            <p id="conteudo2">
+                O programa aborda como o uso excessivo do celular pode afetar os vínculos humanos,
+                gerando o fenômeno do <em>phubbing</em> — quando ignoramos pessoas reais para dar atenção à tela.
+                Também discute o conceito de Ética da Presença: a responsabilidade de estar genuinamente presente
+                nas interações sociais e equilibrar o digital com o humano.
+                A reflexão final deixa uma pergunta importante: as comunidades virtuais unem ou isolam mais as pessoas?
+            </p>
+
+            <div class="tags">
+                <span>#comunidadevirtual</span>
+                <span>#eticadapresenca</span>
+                <span>#tecnologia</span>
+                <span>#convivio</span>
+            </div>
+
+            <a class="voltar" href="../#sect3">Voltar para Matérias</a>
+        </article>
+    </main>
+
+    <script src="https://kit.fontawesome.com/1090c0e9f6.js" crossorigin="anonymous"></script>
+    <script src="../assets/js/materia.js"></script>
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+
+        menuToggle.addEventListener("click", () => {
+            menu.classList.toggle("show");
+
+            // alterna ícone entre "barras" e "x"
+            const icon = menuToggle.querySelector("i");
+            icon.classList.toggle("fa-bars");
+            icon.classList.toggle("fa-xmark");
+        });
+
+    </script>
+</body>
+
+</html>

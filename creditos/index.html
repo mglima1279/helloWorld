@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créditos — Hello World</title>
+    <link rel="icon" href="../assets/styles/img/logo-noBg.png" type="image/x-icon">
+
+    <!-- Estilos globais -->
+    <link rel="stylesheet" href="../assets/styles/root.css">
+
+    <!-- Estilos locais -->
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5%;
+            min-height: 80vh;
+            color: white;
+        }
+
+        h1 {
+            font-family: "empFont";
+            font-size: 2.5rem;
+            color: var(--green);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .creditos-container {
+            width: min(900px, 90%);
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 2rem;
+            padding: 2rem 3rem;
+            box-shadow: 0 0 30px rgba(0, 255, 127, 0.2);
+        }
+
+        .secao {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .secao h2 {
+            color: var(--green);
+            font-size: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 0.5rem;
+            font-family: "empFont";
+        }
+
+        .nomes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem 1.2rem;
+            padding-left: 1rem;
+        }
+
+        .nomes span {
+            font-size: 1rem;
+            background-color: rgba(255, 255, 255, 0.08);
+            padding: 0.4rem 1rem;
+            border-radius: 1rem;
+        }
+
+        .agradecimento {
+            text-align: center;
+            margin-top: 2rem;
+            color: var(--water-green);
+            font-style: italic;
+        }
+
+        /* ========== Responsividade ========== */
+        @media (max-width: 768px) {
+            main {
+                padding: 2rem 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .creditos-container {
+                padding: 1.5rem;
+            }
+
+            .secao h2 {
+                font-size: 1.3rem;
+            }
+
+            .nomes {
+                gap: 0.5rem 0.8rem;
+                padding-left: 0;
+                justify-content: center;
+            }
+
+            .nomes span {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logos">
+            <a href="../"><img src="../assets/styles/img/logo-noBg.png" alt="Logo Hello World"></a>
+            <div class="line"></div>
+            <a href="https://www.se.senai.br"><img src="../assets/styles/img/logoSenai.png" alt="Logo Senai"></a>
+        </div>
+
+        <!-- Ícone do menu hamburguer -->
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <menu id="menu">
+            <a href="../">Início</a>
+            <a href="./creditos/">Créditos</a>
+        </menu>
+    </header>
+
+    <main>
+        <h1>CRÉDITOS</h1>
+
+        <div class="creditos-container">
+
+            <div class="secao">
+                <h2>Criativa</h2>
+                <div class="nomes">
+                    <span>Todos</span>
+                </div>
+            </div>
+
+            <div class="secao">
+                <h2>Pesquisa</h2>
+                <div class="nomes">
+                    <span>Daniel</span><span>Kauê</span><span>Antonio</span><span>Eliel</span>
+                    <span>Moyses</span><span>Leonardo</span>
+                </div>
+            </div>
+
+            <div class="secao">
+                <h2>Roteiro</h2>
+                <div class="nomes">
+                    <span>Manoel</span><span>Moyses</span><span>Davi</span>
+                </div>
+            </div>
+
+            <div class="secao">
+                <h2>Produção de Conteúdo</h2>
+                <div class="nomes">
+                    <span>Felipe</span><span>Mary</span><span>Davi</span><span>Flavia</span><span>Jonatas</span>
+                </div>
+            </div>
+
+            <div class="secao">
+                <h2>Produção Gráfica</h2>
+                <div class="nomes">
+                    <span>Fabricia</span><span>Manoel</span><span>Larissa</span><span>Layssa</span><span>João
+                        Pedro</span>
+                </div>
+            </div>
+
+            <div class="secao">
+                <h2>Site</h2>
+                <div class="nomes">
+                    <span>Miguel</span>
+                </div>
+            </div>
+
+            <div class="secao">
+                <h2>Apresentação</h2>
+                <div class="nomes">
+                    <span>Manoel</span><span>Guilherme</span><span>Davi</span>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="agradecimento">Obrigado a todos que contribuíram para o projeto Hello World 💚</p>
+    </main>
+
+    <script src="https://kit.fontawesome.com/1090c0e9f6.js" crossorigin="anonymous"></script>
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+
+        menuToggle.addEventListener("click", () => {
+            menu.classList.toggle("show");
+
+            // alterna ícone entre "barras" e "x"
+            const icon = menuToggle.querySelector("i");
+            icon.classList.toggle("fa-bars");
+            icon.classList.toggle("fa-xmark");
+        });
+
+    </script>
+</body>
+
+</html>

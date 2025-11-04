@@ -80,40 +80,17 @@
     position: relative;
     border-radius: 2rem;
     background-color: transparent;
-    aspect-ratio: 1/1;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    transition: filter .2s;
+}
+.infoCard:hover, .infoCard:active{
+    filter: brightness(0.5);
 }
 
 .infoCard img{
     width: 100%;
     border-radius: 2rem;
-}
-
-.infoCard div{
-    aspect-ratio: 1/1;
-    width: 100%;
-
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-
-    border-radius: 2rem;
-
-    display: flex;
-    flex-direction: column-reverse;
-
-    padding: 5%;
-
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.61),  rgba(0, 0, 0, 0.822));
-
-    opacity: 0;
-
-    transition: opacity .25s;
-
-    cursor: pointer;
-}
-.infoCard div:hover{
-    opacity: 1;
 }
 
 /* ========== 🔽 RESPONSIVIDADE 🔽 ========== */

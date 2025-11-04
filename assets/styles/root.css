@@ -95,6 +95,7 @@ body{
 .emp{
     color: var(--green);
     font-family: "empFont";
+    font-size: inherit;
 }
 
 section{
@@ -194,12 +195,6 @@ header menu a {
 header menu a:hover {
     color: var(--green);
     background-color: rgba(255, 255, 255, 0.15);
-}
-
-/* ========== GERAIS ========== */
-.emp {
-    color: var(--green);
-    font-family: "empFont";
 }
 
 section {
