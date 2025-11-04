@@ -1,0 +1,92 @@
+main {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+}
+
+.materia-container {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    border-radius: 2rem;
+    width: min(900px, 90%);
+    box-shadow: 0 0 30px rgba(0, 255, 127, 0.2);
+}
+
+.materia-container h1 {
+    font-family: "empFont";
+    font-size: 2.5rem;
+    margin-bottom: .5rem;
+}
+
+.materia-container h2 {
+    color: var(--green);
+    font-weight: 400;
+    margin-bottom: .5rem;
+}
+
+.materia-container p {
+    line-height: 1.8rem;
+    margin: 1rem 0;
+}
+
+.materia-container img {
+    width: 100%;
+    border-radius: 1rem;
+    margin: 2rem 0;
+    box-shadow: 0 0 25px rgba(0, 255, 127, 0.15);
+}
+
+blockquote {
+    border-left: 5px solid var(--green);
+    padding-left: 1rem;
+    font-style: italic;
+    margin: 2rem 0;
+    color: var(--water-green);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 2rem 0;
+}
+
+.tags span {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2rem;
+    padding: .5rem 1rem;
+    font-size: .9rem;
+}
+
+.voltar {
+    display: block;
+    text-align: right;
+    margin-top: 2rem;
+    color: var(--green);
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .materia-container {
+        padding: 2rem;
+    }
+
+    .materia-container h1 {
+        font-size: 2rem;
+    }
+
+    .materia-container h2 {
+        font-size: 1.2rem;
+    }
+
+    blockquote {
+        font-size: .95rem;
+    }
+}
+
+.voltar:hover {
+    text-decoration: underline;
+    color: var(--water-green);
+}

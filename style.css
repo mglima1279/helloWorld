@@ -19,7 +19,7 @@
 
     h1, span{
         margin-bottom: 2%;
-        font-size: 3cqw;
+        font-size: 3rem;
     }
 
     a{
@@ -77,10 +77,13 @@
 .infoCard{
     max-width: 250px;
     position: relative;
+    border-radius: 2rem;
+    background-color: transparent;
 }
 
 .infoCard img{
     width: 100%;
+    border-radius: 2rem;
 }
 
 .infoCard div{
@@ -91,6 +94,8 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+
+    border-radius: 1rem;
 
     display: flex;
     flex-direction: column-reverse;
@@ -107,4 +112,82 @@
 }
 .infoCard div:hover{
     opacity: 1;
+}
+
+/* ========== 🔽 RESPONSIVIDADE 🔽 ========== */
+
+@media (max-width: 900px) {
+    #sect1 {
+        grid-template-columns: 1fr;
+        text-align: center;
+        height: auto;
+        padding: 10% 5%;
+    }
+
+    #sect1 .left a {
+        position: static;
+        margin-top: 2rem;
+        display: inline-block;
+    }
+
+    #sect1 img {
+        height: 200px;
+        margin: 2rem auto 0 auto;
+        display: block;
+    }
+
+    #sect2 {
+        height: auto;
+        padding: 10% 5%;
+    }
+
+    #sect2 h1 {
+        font-size: 6vw;
+    }
+
+    #sect3 {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #sect1 {
+        padding: 15% 5%;
+    }
+
+    #sect1 .left h1 {
+        font-size: 8vw;
+    }
+
+    #sect1 .left p {
+        font-size: 4vw;
+    }
+
+    #sect1 .left a {
+        padding: 3% 6%;
+        font-size: 4vw;
+        border-radius: 1.5rem;
+    }
+
+    #sect3 {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 10%;
+    }
+
+    .infoCard {
+        max-width: 100%;
+    }
+
+    .infoCard div {
+        opacity: 1;
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8));
+        text-align: center;
+        font-size: 4vw;
+    }
+
+    .infoCard img {
+        border-radius: 1.5rem;
+    }
 }
