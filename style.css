@@ -71,14 +71,16 @@
     gap: 5%;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    place-items: center;
 }
 
 .infoCard{
-    max-width: 250px;
+    width: 100%;
     position: relative;
     border-radius: 2rem;
     background-color: transparent;
+    aspect-ratio: 1/1;
 }
 
 .infoCard img{
@@ -95,7 +97,7 @@
     left: 50%;
     transform: translateX(-50%);
 
-    border-radius: 1rem;
+    border-radius: 2rem;
 
     display: flex;
     flex-direction: column-reverse;

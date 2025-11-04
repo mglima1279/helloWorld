@@ -232,6 +232,10 @@ section {
         z-index: 1000;
     }
 
+    header .logos{
+        width: 30vw;
+    }
+
     header menu.show {
         display: flex;
         animation: fadeIn 0.3s ease;
